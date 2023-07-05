@@ -35,6 +35,7 @@
     "react-device-detect": "^2.2.3"
   },
   "devDependencies": {
+    "@atao60/fse-cli": "^0.1.7",
     "@capacitor/cli": "^5.0.0",
     "@deep-foundation/npm-automation": "^3.1.18",
     "@types/fs-extra": "^11.0.1",
