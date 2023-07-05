@@ -3,10 +3,10 @@
     "target": "ESNext",
     "jsx": "react-jsx",
     "module": "ESNext",
-    "rootDir": "./src",
+    "rootDir": "src",
     "resolveJsonModule": true,
     "declaration": true,
-    "outDir": "./dist",
+    "outDir": "dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -14,6 +14,6 @@
     "moduleResolution": "Node",
     "strictNullChecks": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["dist/**/*"],
+  "exclude": ["node_modules", "src"]
 }
