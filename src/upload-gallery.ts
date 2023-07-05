@@ -10,7 +10,7 @@ export interface IUploadGallery {
 }
 
 
-export default async function uploadGallery({ deep, containerLinkId, galleryPhotos }: IUploadGallery) {
+export async function uploadGallery({ deep, containerLinkId, galleryPhotos }: IUploadGallery) {
   const containTypeLinkId = await deep.id("@deep-foundation/core", "Contain");
   const photoTypeLinkId = await deep.id(CAPACITOR_CAMERA_PACKAGE_NAME, "Photo");
   const base64TypeLinkId = await deep.id(CAPACITOR_CAMERA_PACKAGE_NAME, "Base64");

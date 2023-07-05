@@ -1,11 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { GalleryPhoto, GalleryImageOptions } from '@capacitor/camera';
 import { useLocalStore } from '@deep-foundation/store/local';
-import pickGalleryPhotos from '../pick-photos';
-import uploadGallery from '../upload-gallery';
+import { pickGalleryPhotos } from '../pick-photos';
+import { uploadGallery } from '../upload-gallery';
 import { DeepClient } from '@deep-foundation/deeplinks/imports/client';
 
-export const useGallery = (deep: DeepClient, containerLinkId: number, options?: GalleryImageOptions) => {
+export interface IUseGallery {
+  deep: DeepClient,
+  containerLinkId: number,
+  options?: GalleryImageOptions
+}
+
+export const useGallery = ({ deep, containerLinkId, options }: IUseGallery) => {
   const [galleryPhotos, setGalleryPhotos] = useLocalStore<GalleryPhoto[]>("GalleryPhotos", []);
 
   useEffect(() => {

@@ -1,12 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { Camera, Photo, ImageOptions, CameraResultType } from '@capacitor/camera';
+import React, { useEffect } from 'react';
+import { Photo, ImageOptions } from '@capacitor/camera';
 import { useLocalStore } from '@deep-foundation/store/local';
-import takePhoto from '../take-photo';
-import uploadPhotos from '../upload-photos';
+import { takePhoto } from '../take-photo';
+import { uploadPhotos } from '../upload-photos';
 import { DeepClient } from '@deep-foundation/deeplinks/imports/client';
-import createContainer from '../create-container';
 
-export const useCamera = (deep: DeepClient, containerLinkId: number, options?: ImageOptions) => {
+export interface IUseCamera {
+  deep: DeepClient,
+  containerLinkId: number,
+  options?: ImageOptions
+}
+
+export const useCamera = ({ deep, containerLinkId, options }: IUseCamera) => {
   const [photos, setPhotos] = useLocalStore<Photo[]>('CameraPhotos', []);
 
   useEffect(() => {

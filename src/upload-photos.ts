@@ -8,7 +8,7 @@ export interface IUploadPhotos {
   photos: Photo[]
 }
 
-export default async function uploadPhotos({deep, containerLinkId, photos}:IUploadPhotos) {
+export async function uploadPhotos({deep, containerLinkId, photos}:IUploadPhotos) {
   const containTypeLinkId = await deep.id("@deep-foundation/core", "Contain");
   const photoTypeLinkId = await deep.id(CAPACITOR_CAMERA_PACKAGE_NAME, "Photo");
   const base64TypeLinkId = await deep.id(CAPACITOR_CAMERA_PACKAGE_NAME, "Base64");
