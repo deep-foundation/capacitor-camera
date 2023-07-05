@@ -1,5 +1,5 @@
-import { Button, Stack, StackDivider, Box, Text, Image, Card, CardHeader, CardBody, Heading, Flex } from "@chakra-ui/react";
-import { Photo, GalleryPhoto } from '@capacitor/camera';
+import { Stack, StackDivider, Box, Text, Image, Card, CardBody, Heading } from "@chakra-ui/react";
+
 
 export function ImageCard({ image }: any) {
 

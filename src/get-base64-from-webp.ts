@@ -1,4 +1,4 @@
-export const getBase64FromWebp = async (webPath: string)=> {
+export const getBase64FromWebp = async (webPath: string) => {
     // Fetch the photo, read as a blob, then convert to base64 format
     const response = await fetch(webPath!);
     const blob = await response.blob();

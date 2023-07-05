@@ -19,7 +19,7 @@ export async function uploadGallery({ deep, containerLinkId, galleryPhotos }: IU
   const formatTypeLinkId = await deep.id(CAPACITOR_CAMERA_PACKAGE_NAME, "Format");
   const timestampTypeLinkId = await deep.id(CAPACITOR_CAMERA_PACKAGE_NAME, "TimeStamp");
 
-  const photos = await Promise.all(galleryPhotos.map(async (photo : GalleryPhoto) => ({
+  const photos = await Promise.all(galleryPhotos.map(async (photo: GalleryPhoto) => ({
     format: photo.format,
     webPath: photo.webPath,
     exif: photo.exif ? photo.exif : "none",
