@@ -4,7 +4,7 @@
   "keywords": [
     "deep-package"
   ],
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "A deep package that is based on @capacitor/camera package",
   "repository": {
     "type": "git",
