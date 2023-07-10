@@ -43,5 +43,5 @@ export const useCamera = ({ deep, containerLinkId, options }: IUseCameraOptions)
     return photo; // Return the captured photo.
   };
 
-  return newPhoto; // Return the function to capture a new photo.
+  return {photos, newPhoto}; // Return the function to capture a new photo.
 };

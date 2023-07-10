@@ -41,5 +41,5 @@ export const useGallery = ({ deep, containerLinkId, options }: IUseGalleryOption
     setGalleryPhotos([...galleryPhotos, ...newGalleryPhotos]); // Add the new photos to the state.
   };
 
-  return pickPhotosFromGallery; // Return the function for picking photos from the gallery.
+  return { galleryPhotos, pickPhotosFromGallery }; // Return the function for picking photos from the gallery.
 };

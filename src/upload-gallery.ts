@@ -4,14 +4,14 @@ import { getBase64FromWebp } from './get-base64-from-webp';
 import { GalleryPhoto } from '@capacitor/camera';
 import { LinkName } from './link-name';
 
-export interface IUploadGallery {
+export interface IUploadGalleryOptions {
   deep: DeepClient; // The DeepClient instance.
   containerLinkId: number; // The ID of the container link.
   galleryPhotos: GalleryPhoto[]; // Array of gallery photos to upload.
 }
 
 
-export async function uploadGallery({ deep, containerLinkId, galleryPhotos }: IUploadGallery) {
+export async function uploadGallery({ deep, containerLinkId, galleryPhotos }: IUploadGalleryOptions) {
   // Retrieve the link IDs for the nessesary types.
   const containTypeLinkId = await deep.id("@deep-foundation/core", "Contain");
   const photoTypeLinkId = await deep.id(PACKAGE_NAME, LinkName[LinkName.Photo]);
