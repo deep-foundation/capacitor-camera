@@ -109,3 +109,5 @@ const { cameraPermissions, getPermissions } = usePermissions();
 ## Contribution
 
 Feel free to contribute. Please fork the repository and submit a pull request for any bugs, improvements, or features.
+
+[`Camera`]: https://deep-foundation.github.io/capacitor-device/enums/LinkName.html#Camera
