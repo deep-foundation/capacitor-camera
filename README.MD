@@ -41,11 +41,11 @@ You can also create it manually inside your deepcase client. Open Insert menu, s
 
 Capture a new photo.
 ```js
-const photo = await takePhoto(options?);
+const photo = await Camera.takePhoto(options?);
 ```
 Upload the array of captured photos to deep database.
 ```js 
-await uploadPhotos({ deep, containerLinkId, photos });
+await Camera.uploadPhotos({ deep, containerLinkId, photos });
 // To upload one photo pass it inside an array. [photo]
 ```
 
@@ -53,11 +53,11 @@ await uploadPhotos({ deep, containerLinkId, photos });
 
 Pick a new photo.
 ```js
-const galleryPhotos = await pickGalleryPhotos(options?);
+const galleryPhotos = await Camera.pickGalleryPhotos(options?);
 ```
 Upload the array of picked photos to deep database.
 ```js 
-await uploadGallery({ deep, containerLinkId, galleryPhotos });
+await Camera.uploadGallery({ deep, containerLinkId, galleryPhotos });
 ```
 
 5. Download images from deep database:
