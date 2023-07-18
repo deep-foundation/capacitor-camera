@@ -1,7 +1,7 @@
 {
   "package": {
     "name": "@deep-foundation/capacitor-camera",
-    "version": "1.0.0"
+    "version": "1.0.2"
   },
   "data": [
     {
@@ -13,81 +13,143 @@
     },
     {
       "package": {
-        "dependencyId": 0,
-        "containValue": "Any"
+        "dependencyId": 1,
+        "containValue": "Device"
       },
       "id": 2
     },
     {
       "package": {
-        "dependencyId": 1,
-        "containValue": "Device"
+        "dependencyId": 0,
+        "containValue": "Any"
       },
       "id": 3
     },
     {
-      "id": "Format",
-      "type": 1,
-      "from": "Photo",
-      "to": 2
+      "package": {
+        "dependencyId": 0,
+        "containValue": "Value"
+      },
+      "id": 4
     },
     {
-      "id": "Photo",
-      "type": 1,
-      "from": "Camera",
-      "to": 2
-    },
-    {
-      "id": "Exif",
-      "type": 1,
-      "from": "Photo",
-      "to": 2
-    },
-    {
-      "id": "WebPath",
-      "type": 1,
-      "from": "Photo",
-      "to": 2
-    },
-    {
-      "id": "Path",
-      "type": 1,
-      "from": "Photo",
-      "to": 2
-    },
-    {
-      "id": "Base64",
-      "type": 1,
-      "from": "Photo",
-      "to": 2
+      "package": {
+        "dependencyId": 0,
+        "containValue": "String"
+      },
+      "id": 5
     },
     {
       "id": "Camera",
       "type": 1
     },
     {
-      "id": "PhotoPermissions",
-      "type": 1,
-      "from": "Camera",
-      "to": 2
-    },
-    {
-      "id": "CameraPermissions",
-      "type": 1,
-      "from": "Camera",
-      "to": 2
-    },
-    {
       "id": "Dependency",
       "type": 1,
-      "from": 3,
+      "from": 2,
+      "to": 2
+    },
+    {
+      "id": "Photo",
+      "type": 1,
+      "from": "Camera",
       "to": 3
+    },
+    {
+      "id": "Format",
+      "type": 1,
+      "from": "Photo",
+      "to": 3
+    },
+    {
+      "id": "formatstring",
+      "type": 4,
+      "from": "Format",
+      "to": 5
+    },
+    {
+      "id": "Exif",
+      "type": 1,
+      "from": "Photo",
+      "to": 3
+    },
+    {
+      "id": "exifstring",
+      "type": 4,
+      "from": "Exif",
+      "to": 5
+    },
+    {
+      "id": "WebPath",
+      "type": 1,
+      "from": "Photo",
+      "to": 3
+    },
+    {
+      "id": "webpathstring",
+      "type": 4,
+      "from": "WebPath",
+      "to": 5
+    },
+    {
+      "id": "Path",
+      "type": 1,
+      "from": "Photo",
+      "to": 3
+    },
+    {
+      "id": "pathstring",
+      "type": 4,
+      "from": "Path",
+      "to": 5
+    },
+    {
+      "id": "Base64",
+      "type": 1,
+      "from": "Photo",
+      "to": 3
+    },
+    {
+      "id": "base64string",
+      "type": 4,
+      "from": "Base64",
+      "to": 5
     },
     {
       "id": "TimeStamp",
       "type": 1,
       "from": "Photo",
-      "to": 2
+      "to": 3
+    },
+    {
+      "id": "timestampstring",
+      "type": 4,
+      "from": "TimeStamp",
+      "to": 5
+    },
+    {
+      "id": "PhotoPermissions",
+      "type": 1,
+      "from": "Camera",
+      "to": 3
+    },
+    {
+      "id": "photopermissionsstring",
+      "type": 4,
+      "from": "PhotoPermissions",
+      "to": 5
+    },
+    {
+      "id": "CameraPermissions",
+      "type": 1,
+      "from": "Camera",
+      "to": 3
+    },
+    {
+      "id": "camerapermissionstring",
+      "type": 4,
+      "from": "CameraPermissions",
+      "to": 5
     }
   ],
   "errors": [],
@@ -97,8 +159,8 @@
       "version": "0.0.2"
     },
     {
-      "name": "@deep-foundation/device",
-      "version": "1.0.0"
+      "name": "@deep-foundation/capacitor-device",
+      "version": "14.0.3"
     }
   ]
 }
