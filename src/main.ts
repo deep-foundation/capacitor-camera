@@ -21,6 +21,8 @@ import { pickGalleryPhotos } from './pick-photos';
 import { uploadPhotos } from './upload-photos';
 import { uploadGallery } from './upload-gallery';
 
+export {Package,PackageOptions} from './package'
+
 export const Camera = {
   takePhoto,
   pickGalleryPhotos,
