@@ -11,10 +11,13 @@
     "url": "https://github.com/deep-foundation/capacitor-camera"
   },
   "scripts": {
-    "build": "tsc",
-    "clean-build": "fse remove dist && npm run build",
+    "library:build:clean": "fse remove dist && npm run library:build:dirty",
+    "library:build:dirty": "ts-node --esm ./automation/library/build.ts",
     "npm-pull": "npm-pull",
-    "npm-release": "npm-release"
+    "npm-release": "npm-release",
+    "library:build:generate-package-class": "generate-package-class",
+    "documentation:generate": "ts-node --esm ./automation/documentation/generate.ts",
+    "library:documentation:generate": "typedoc ./src/main.ts"
   },
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
