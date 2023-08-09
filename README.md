@@ -13,6 +13,10 @@ Provides links&functions based on [`capacitor-camera`](https://www.npmjs.com/pac
 The [`Camera`] link serves as a container for link structures representing records inside deep.  
 You need only one container link per deep instance.
 
+<img src="https://github.com/deep-foundation/capacitor-camera/assets/44348954/27e9cda2-540a-42f9-ae95-7edc92b12ad1" alt= “” width="80%" height="'80%">
+
+
+
 ## Prerequisitions
 - Install this package in your deep by using npm-packager
 - Provide permissions to this package
@@ -32,7 +36,7 @@ const CameraPermissions = await getCameraPermissions();
 3. Create container link of type [`Camera`] to store Camera data:
 
 ```js
-const containerLinkId = await createContainer(deep:DeepClient)
+const containerLinkId = await createContainer(deep)
 ```
 
 You can also create it manually inside your deepcase client. Open Insert menu, search for and then insert "AudioRecords" type link.
@@ -87,14 +91,20 @@ You will see basic ui with all package functionality.
 3. Custom hooks can be used anywhere in your deep app:
 
 useCamera() hook for taking a new photo with the camera.
+Automatically uploads new photos into your deep instance.
 ```js
 const { photos, newPhoto } = useCamera({ deep, containerLinkId });
 ```
 
 useGallery() hook for picking photos from gallery.
+Automatically uploads picked photos into your deep instance.
 ```js
 const { galleryPhotos, pickPhotosFromGallery } = useGallery({ deep, containerLinkId });
 ```
+* **If there is no internet connection photos are stored locally on your device and then will upload as soon as connection reappears.**
+
+
+
 
 useContainer() hook to get existing or create a new container link ID.
 ```js
