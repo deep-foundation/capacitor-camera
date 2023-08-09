@@ -111,7 +111,7 @@ useContainer() hook to get existing or create a new container link ID.
 const containerLinkId = useContainer(deep);
 ```
 
-usePermissions() hook to manage camera and gallery permissions.
+usePermissions() hook to manage camera and gallery permissions on mobile devices.
 ```js
 const { cameraPermissions, getPermissions } = usePermissions();
 ```
