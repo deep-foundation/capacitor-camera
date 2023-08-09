@@ -39,7 +39,7 @@ const CameraPermissions = await getCameraPermissions();
 const containerLinkId = await createContainer(deep)
 ```
 
-You can also create it manually inside your deepcase client. Open Insert menu, search for and then insert "AudioRecords" type link.
+You can also create it manually inside your deepcase client. Open Insert menu, search for and then insert "Camera" type link.
 
 4. Take photos:
 
