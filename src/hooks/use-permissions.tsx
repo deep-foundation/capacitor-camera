@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { PermissionStatus } from "@capacitor/camera";
-import { getCameraPermissions } from "../get-permissions";
+import { getCameraPermissions } from "../get-permissions.js";
 import { defineCustomElements } from "@ionic/pwa-elements/loader";
 
 /**

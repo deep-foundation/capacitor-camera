@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { GalleryPhoto, GalleryImageOptions } from '@capacitor/camera';
-import { useLocalStore } from '@deep-foundation/store/local';
-import { pickGalleryPhotos } from '../pick-photos';
-import { uploadGallery } from '../upload-gallery';
+import { useLocalStore } from '@deep-foundation/store/local.js';
+import { pickGalleryPhotos } from '../pick-photos.js';
+import { uploadGallery } from '../upload-gallery.js';
 import { DeepClient } from '@deep-foundation/deeplinks/imports/client.js';
 
 /**
