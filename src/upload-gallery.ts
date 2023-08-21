@@ -1,8 +1,8 @@
-import { DeepClient } from '@deep-foundation/deeplinks/imports/client';
-import { PACKAGE_NAME } from './package-name';
-import { getBase64FromWebp } from './get-base64-from-webp';
+import { DeepClient } from '@deep-foundation/deeplinks/imports/client.js';
+import { PACKAGE_NAME } from './package-name.js';
+import { getBase64FromWebp } from './get-base64-from-webp.js';
 import { GalleryPhoto } from '@capacitor/camera';
-import { LinkName } from './link-name';
+import { LinkName } from './link-name.js';
 
 export interface IUploadGalleryOptions {
   deep: DeepClient; // The DeepClient instance.

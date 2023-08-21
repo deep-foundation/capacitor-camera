@@ -1,6 +1,6 @@
-import { DeepClient } from '@deep-foundation/deeplinks/imports/client';
-import { PACKAGE_NAME } from './package-name';
-import { LinkName } from './link-name';
+import { DeepClient } from '@deep-foundation/deeplinks/imports/client.js';
+import { PACKAGE_NAME } from './package-name.js';
+import { LinkName } from './link-name.js';
 
 /**
  * Downloads images created by this camera package from deep database.

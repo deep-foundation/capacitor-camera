@@ -3,7 +3,7 @@ import { Photo, ImageOptions } from '@capacitor/camera';
 import { useLocalStore } from '@deep-foundation/store/local';
 import { takePhoto } from '../take-photo';
 import { uploadPhotos } from '../upload-photos';
-import { DeepClient } from '@deep-foundation/deeplinks/imports/client';
+import { DeepClient } from '@deep-foundation/deeplinks/imports/client.js';
 
 /**
  * Represents the parameters for using the camera.

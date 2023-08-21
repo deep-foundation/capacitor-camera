@@ -3,7 +3,7 @@ import { GalleryPhoto, GalleryImageOptions } from '@capacitor/camera';
 import { useLocalStore } from '@deep-foundation/store/local';
 import { pickGalleryPhotos } from '../pick-photos';
 import { uploadGallery } from '../upload-gallery';
-import { DeepClient } from '@deep-foundation/deeplinks/imports/client';
+import { DeepClient } from '@deep-foundation/deeplinks/imports/client.js';
 
 /**
  * Represents the parameters for using the gallery.

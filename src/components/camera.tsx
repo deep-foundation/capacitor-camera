@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { Stack, Card, CardHeader, Heading, CardBody, Text, Button } from "@chakra-ui/react";
-import { DeepClient } from "@deep-foundation/deeplinks/imports/client";
+import { DeepClient } from "@deep-foundation/deeplinks/imports/client.js";
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
-import { useCamera } from '../hooks/use-camera';
-import { useGallery } from '../hooks/use-gallery';
-import { downloadImages } from '../download-images';
+import { useCamera } from '../hooks/use-camera.js';
+import { useGallery } from '../hooks/use-gallery.js';
+import { downloadImages } from '../download-images.js';
 import { isIOS, isAndroid } from "react-device-detect";
-import { ImageCard } from "./image-card";
-import { useContainer } from "../hooks/use-container";
-import { usePermissions } from "../hooks/use-permissions";
+import { ImageCard } from "./image-card.js";
+import { useContainer } from "../hooks/use-container.js";
+import { usePermissions } from "../hooks/use-permissions.js";
 
 /**
  * React component for using the camera.

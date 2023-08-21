@@ -1,7 +1,7 @@
-import { DeepClient } from '@deep-foundation/deeplinks/imports/client';
+import { DeepClient } from '@deep-foundation/deeplinks/imports/client.js';
 import { Photo } from '@capacitor/camera';
-import { PACKAGE_NAME } from './package-name';
-import { LinkName } from './link-name';
+import { PACKAGE_NAME } from './package-name.js';
+import { LinkName } from './link-name.js';
 
 export interface IUploadPhotosOptions {
   deep: DeepClient, // The DeepClient instance.
