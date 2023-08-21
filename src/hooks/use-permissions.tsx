@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { PermissionStatus } from "@capacitor/camera";
 import { getCameraPermissions } from "../get-permissions.js";
-import { defineCustomElements } from "@ionic/pwa-elements/loader";
+import { defineCustomElements } from "@ionic/pwa-elements/loader/index.js";
 
 /**
  * Custom hook for obtaining camera permissions.
