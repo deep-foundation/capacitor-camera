@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Stack, Card, CardHeader, Heading, CardBody, Text, Button } from "@chakra-ui/react";
 import { DeepClient } from "@deep-foundation/deeplinks/imports/client.js";
-import { defineCustomElements } from '@ionic/pwa-elements/loader';
 import { useCamera } from '../hooks/use-camera.js';
 import { useGallery } from '../hooks/use-gallery.js';
 import { downloadImages } from '../download-images.js';
