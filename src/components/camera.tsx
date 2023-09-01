@@ -13,11 +13,17 @@ import { usePermissions } from "../hooks/use-permissions.js";
  * React component for using the camera.
  * @param {DeepClient} deep - The DeepClient object instance.
  */
-export function CapacitorCamera({ deep }: { deep: DeepClient }) {
-  const [images, setImages] = useState<any[]>([]); // State variable for storing images downloaded from deep database.
+export function CapacitorCamera({ deep, containerLinkId: passedContainerLinkId }: { deep: DeepClient; containerLinkId?: number }) {
+  const [images, setImages] = useState<any[]>([]);// State variable for storing images downloaded from deep database.
+
+  const containerLinkIdFromHook = useContainer(deep); // Retrieve the container link ID.
+  const [containerLinkId, setContainerLinkId] = useState<number>(passedContainerLinkId || containerLinkIdFromHook);
+
+  useEffect(() => {
+    setContainerLinkId(passedContainerLinkId || containerLinkIdFromHook);
+  }, [deep, passedContainerLinkId, containerLinkIdFromHook]);
 
   const { cameraPermissions, getPermissions } = usePermissions(); // Get camera permissions.
-  const containerLinkId = useContainer(deep); // Retrieve the container link ID.
   const { galleryPhotos, pickPhotosFromGallery } = useGallery({ deep, containerLinkId }); // Custom hook for using the gallery.
   const { photos, newPhoto } = useCamera({ deep, containerLinkId }); // Custom hook for taking a new photo with the camera.
 
