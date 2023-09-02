@@ -75,7 +75,7 @@ const images = await downloadImages(deep);
 1. Import CapacitorCamera react component or hooks:
 
 ```js
-import { CapacitorCamera, useCamera, useGallery, usePermissions, useContainer } from "@deep-foundation/capacitor-camera";
+import { WithCapacitorCamera, CapacitorCamera, useCamera, useGallery, usePermissions, useContainer } from "@deep-foundation/capacitor-camera";
 ```
 
 2. Create CapacitorCamera component instance inside your deep app and pass a DeepClient instance.
@@ -87,6 +87,13 @@ function Page() {
 ```
 
 You will see basic ui with all package functionality.
+
+Alternatively you can use WithCapacitorCamera Component like that:
+```jsx
+<WithCapacitorCamera deep={yourDeepInstance} containerLinkId={yourContainerLinkId}>
+    <CapacitorCamera />
+</WithCapacitorCamera>
+```
 
 3. Custom hooks can be used anywhere in your deep app:
 

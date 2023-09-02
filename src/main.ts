@@ -7,6 +7,7 @@ export { pickGalleryPhotos } from './pick-photos.js';
 export { uploadPhotos, type IUploadPhotosOptions } from './upload-photos.js';
 export { uploadGallery, type IUploadGalleryOptions } from './upload-gallery.js';
 export { downloadImages } from './download-images.js';
+export { WithCapacitorCamera, type WithCapacitorCameraProps } from './components/with-capacitor-camera.js'
 export { CapacitorCamera } from './components/camera.js';
 export { ImageCard } from './components/image-card.js';
 export { useCamera, type IUseCameraOptions } from './hooks/use-camera.js';
