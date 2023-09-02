@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { PermissionStatus } from "@capacitor/camera";
 import { getCameraPermissions } from "../get-permissions.js";
-import { defineCustomElements } from "@ionic/pwa-elements/loader";
 
 /**
  * Custom hook for obtaining camera permissions.
@@ -11,7 +10,11 @@ export const usePermissions = () => {
   const [cameraPermissions, setCameraPermissions] = useState<PermissionStatus | undefined>(undefined);
 
   useEffect(() => {
-    if (typeof (window) !== undefined) { defineCustomElements(window); } // Define custom camera elements if running in a browser window.
+    if (typeof (window) !== undefined) { 
+      import('@ionic/pwa-elements/loader').then(({ defineCustomElements }) => {
+        defineCustomElements(window);
+      });
+     } // Define custom camera elements if running in a browser window.
     else getPermissions(); // Get camera permissions on other platforms.
   });
 
