@@ -4,7 +4,7 @@
   "keywords": [
     "deep-package"
   ],
-  "version": "1.1.12",
+  "version": "1.1.13",
   "description": "A deep package that is based on @capacitor/camera package",
   "repository": {
     "type": "git",
@@ -32,20 +32,20 @@
     "@deep-foundation/tsx": "^0.0.5"
   },
   "peerDependencies": {
-    "@capacitor/camera": "^5.0.4",
-    "@chakra-ui/react": "^2.5.5",
+    "@capacitor/camera": "~5.0.4",
+    "@chakra-ui/react": "~2.5.5",
     "@deep-foundation/deeplinks": "~0.0.265",
-    "@ionic/pwa-elements": "^3.2.2",
-    "react": "^18.2.0",
-    "react-device-detect": "^2.2.3"
+    "@ionic/pwa-elements": "~3.2.2",
+    "react": "~18.2.0",
+    "react-device-detect": "~2.2.3"
   },
   "devDependencies": {
-    "@atao60/fse-cli": "^0.1.7",
-    "@capacitor/cli": "^5.0.0",
-    "@deep-foundation/npm-automation": "^18.1.10",
-    "@types/fs-extra": "^11.0.1",
-    "@types/node": "^20.2.4",
-    "fs-extra": "^11.1.1",
-    "typescript": "^4.9.5"
+    "@atao60/fse-cli": "~0.1.7",
+    "@capacitor/cli": "~5.0.0",
+    "@deep-foundation/npm-automation": "~18.1.10",
+    "@types/fs-extra": "~11.0.1",
+    "@types/node": "~20.2.4",
+    "fs-extra": "~11.1.1",
+    "typescript": "~4.9.5"
   }
 }
